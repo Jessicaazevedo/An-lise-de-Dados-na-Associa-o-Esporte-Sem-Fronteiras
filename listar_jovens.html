@@ -1,0 +1,17 @@
+<!-- templates/jovens/listar_jovens.html -->
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Jovens</title>
+</head>
+<body>
+    <h1>Jovens Participantes</h1>
+    <ul>
+        {% for jovem in jovens %}
+        <li><a href="{% url 'detalhes_jovem' jovem.id %}">{{ jovem.nome }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
