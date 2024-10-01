@@ -1,0 +1,22 @@
+<!-- templates/jovens/detalhes_jovem.html -->
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalhes do Jovem</title>
+</head>
+<body>
+    <h1>{{ jovem.nome }}</h1>
+    <p>Idade: {{ jovem.idade }}</p>
+    <p>Escolaridade: {{ jovem.escolaridade }}</p>
+    <p>Desempenho: {{ jovem.desempenho }}</p>
+
+    <h2>Atividades</h2>
+    <ul>
+        {% for atividade in atividades %}
+        <li>{{ atividade.descricao }} - Nota: {{ atividade.nota }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
